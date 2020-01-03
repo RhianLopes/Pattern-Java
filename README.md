@@ -134,7 +134,7 @@ Após devida correção e modificação adicionada no PR, deve ser removido o ``
 
 #### Code Review:
 
-O Code Review é uma prática muito importante entre á equipe em vários, segue o link para saber mais sobre o [Code Review](https://medium.com/trainingcenter/qual-o-real-valor-do-code-review-para-uma-equipe-de-desenvolvimento-f43f894c0a04), deve existir em todos os Pull Request, onde deve ser decidido um número minímo de 
+O Code Review é uma prática muito importante entre á equipe em vários, segue o link para saber mais sobre o [Code Review](https://medium.com/trainingcenter/qual-o-real-valor-do-code-review-para-uma-equipe-de-desenvolvimento-f43f894c0a04), deve existir em todos os Pull Request, onde deve ser decidido um número minímo de views ou likes de um PR, a aprovação do equipe em si. Em casos extremos onde é necessária rápida aprovação ou em casos que é necessária a aprovação e o membro está sozinho, é permitida sim, a aprovação do PR sem Views ou Likes, mas o membro estará comprometido em corrigir, caso quebre a aplicação.
 
 
 
