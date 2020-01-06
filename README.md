@@ -17,7 +17,7 @@ feat(UserLogin): add the persistence data in the User Login
 fix: ajusts all bugs on User persistence
 ```
 
-### Tipo:
+### 🥇 Tipo:
 
 O Tipo se refere a que tipo de commit se trata, sejam eles...
 
@@ -26,7 +26,7 @@ O Tipo se refere a que tipo de commit se trata, sejam eles...
 - ```refactor```: Melhoria de código ou aumento de Regra de Negócio
 - ```remove```: Remoção de código
 
-### Escopo:
+### 📖 Escopo:
 
 O Escopo deve servir para referenciar uma Funcionalidade, Documento ou Arquitetura, ex: ```UserLogin, README, Order...```.
 
@@ -34,7 +34,7 @@ Deve ser escrito em [Inglês Americano](https://www.inglesnapontadalingua.com.br
 
 Deve ser escrito seguindo o padrão [CamelCase](http://java-hunters.blogspot.com/2014/12/o-padrao-camelcase.html) em sua escrita, excessão de casos onde se é modificado diversos arquivos e funcionalidades.
 
-### Assunto:
+### 🎞 Assunto:
 
 Assunto deve também ser escrito em Inglês Americano, igualmente como o Escopo, e não devem ter nenhum tipo de acento em sua escrita.
 
