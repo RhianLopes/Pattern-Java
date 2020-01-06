@@ -42,7 +42,7 @@ O assunto deve resumir de maneira curta e clara o que foi feito, modificado ou r
 
 ## 🏝 Branch
 
-### Arquitetura
+### 🧱 Arquitetura
 
 O projeto deve ter as seguintes estruras de branch...
 
@@ -66,23 +66,23 @@ o --> (master)
 o
 ```
 
-#### 🔥 (master):
+#### (master):
 
 É a branch principal, ela deve ser protegida, protegida de commits diretamente nela, e deve ser a branch que ficará "Em Produção", ou seja, acessível ao usuário final via servidor.
 
-#### 🔎 (test):
+#### (test):
 
 É a branch de homologação, branch responsável pela parte de qualidade de novas funcionalidades ou solução de Bugs, ela deve ser exatamente igual á branch ```master``` adicionada de novas funcionalidades ou soluções de Bugs que estarão sujeito a mudanças pela equipe de qualidade. A branch ```(test)``` é opcional, pois, a parte de qualidade não está presente em todos os projetos, então cabe por decisão da equipe a existência dela.
 
 Outra decisão opcional, é o acesso da branch ```test``` para homologação, se referênciando se ela está em algum servidor público, privado ou localmente, deve ser decidido entre á equipe.
 
-#### ⚙ (develop): 
+#### (develop): 
 
 É a branch principal para a equipe de desenvolvimento, ou seja, deve ser obrigatória. A ideia da existência dela é a do desenvolvedor realizar testes para verificar se aconteceu algum imprevisto com a nova funcionalidade ou solução, outro motivo de sua existência é o aguardo de outras partes da solução entre desenvolvedores. Obrigatóriamente ela deve ser cópia da branch ```test```, caso ela não exista deve ser utilizada a branch ```master``` para copiar.
 
 É opcional seu acesso igualmente a branch ```test```, mas ao contrário da mesma, a branch ```develop``` se presente em algum servidor, deve ser acessada apenas pelos os desenvolvedores para realização de testes funcionais.
 
-#### 🧱 (feature/fix/refactor/remove):
+#### (feature/fix/refactor/remove):
 
 São as branchs responsáveis por funcionalidades, soluções e remoção de código. Para criação de uma nova branch com alguma das responsábilidades citadas, ela deve ser criada a partir da branch ```develop```, feita a solução, deve ser atualizada a mesma com base na branch ```develop```, em caso de conflitos, devem ser resolvidos e após isso aberto o Pull Request ou Merge Request diretamente via plataforma de versionamento de repositório.
 
