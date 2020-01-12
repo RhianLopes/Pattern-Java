@@ -152,7 +152,7 @@ O Code Review é uma prática muito importante entre á equipe em vários, segue
 - Swagger
 - JUnit
 
-## 🎨 Criação API
+## 🎨 Criação do Projeto
 
 ### Spring Initializr
 
@@ -173,3 +173,21 @@ Por fim, podemos adicionar algumas dependências diretamente pela interface, ond
 ![](https://cdn.discordapp.com/attachments/576875163686010911/665766837878784005/unknown.png)
 
 Feita as configurações necessárias, podemos gerar nosso projeto, onde é feito o download de um arquivo ```.zip``` onde nele está contido nosso projeto java, bastando apenas descompactar o arquivo para ter acesso ao projeto.
+
+### Inicialização
+
+Para iniciarmos nosso projeto, irei utilizar o [IntelliJ IDEA](http://jetbrains.com/idea/), caso queira utiliza-la também, basta fazer o [download](https://www.jetbrains.com/idea/download/#section=windows) podendo seguir o [tutorial](https://treehouse.github.io/installation-guides/windows/intellij-idea-win.html).
+
+![](https://media.discordapp.net/attachments/576875163686010911/666012376058822686/unknown.png?width=439&height=406)
+
+![](https://media.discordapp.net/attachments/576875163686010911/666013223559888897/unknown.png?width=363&height=300)
+
+Com o intelliJ instalado e já aberto, podemos abrir nosso projeto em ```Open```, e procurar o local em seu computador onde está o nosso projeto, depois de encontrado, devemos selecionar o arquivo ```pom.xml``` e clicar em ```OK```. Feito isso, o intelliJ irá importar e fazer o download de nossas dependências, se necessário.
+
+### Dependências Adicionais
+
+Apesar do Spring Initializr adicionar a grande maioria das dependência de nosso projeto, devemos adicionar mais algumas dependências em nosso projeto, serão elas:
+
+#### Swagger
+
+O [Swagger](link do swagger)
