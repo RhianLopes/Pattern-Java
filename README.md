@@ -141,24 +141,35 @@ O Code Review é uma prática muito importante entre á equipe em vários, segue
 - Java
 - Maven
 - Spring Boot
+- Spring Web
 - Spring Security
 - Spring Data JPA
 - Lombok
 - Validators
 - OpenFeign
-- Liquibase
+- MySQL Driver
+- Liquibase Migration
 - Swagger
 - JUnit
-- ModelMapper*
 
-### Java
+## 🎨 Criação API
 
-Java é a linguagem de programação escolhida, é o verdadeiro coração desse repositório, com ela iremos montar nossa API com o objetivo de explicar o dever de cada pasta ou tecnologia usada para facilitar e melhorar a nossa API em Java.
+### Spring Initializr
 
-Em meu Pattern Java, é livre a escolha entre as versões do Java 8, 11 e 13, assim ficando de escolha da Equipe de Desenvolvimento ou Arquiteto escolher a versão correta, mas por preferência minha, uso o Java 8. Para cada um das versões do Java, deixo as Dependências de suas respectivas versões.
+Para a criação da API, utilizo o [Spring Initializr](https://start.spring.io/) que é uma interface web e simples para a criação de um projeto Spring, nele podemos configurar a linguagem, nome do projeto, dependências etc...
 
-Java 8
-```
-.
-```
+![](https://cdn.discordapp.com/attachments/576875163686010911/665753881594036255/unknown.png) 
 
+Iremos criar um projeto [Maven](https://www.devmedia.com.br/introducao-ao-maven/25128), que é uma ferramenta de integração e padronização de projetos desenvolvida pela Apache, ela é responsável por gerenciar suas dependências e seus builds, dessa maneira, o Maven é uma ferramenta que facilita e nos ajuda muito nos projetos no dia-a-dia. A linguagem de programação escolhida será o [Java](https://www.tecmundo.com.br/programacao/2710-o-que-e-java-.htm) com a versão ```2.2.2``` do [Spring Boot](https://blog.geekhunter.com.br/tudo-o-que-voce-precisa-saber-sobre-o-spring-boot/) recomendada pela interface, o Spring Boot é uma ferramenta que facilita todas as nossas configurações em um ecossistema Spring, configurações que antes podiam demorar horas, mas com o Spring Boot falamos em poucos minutos.
+
+![](https://cdn.discordapp.com/attachments/576875163686010911/665759859198656532/unknown.png)
+
+Entrando em ```Options```, podemos dar um nome, nome do pacote e a descrição do nosso projeto, também podemos informar se usaremos [Jar ou War](https://cursos.alura.com.br/forum/topico-qual-a-diferenca-entre-jar-e-war-64923), em nosso caso ```.jar``` e por fim, a versão que usaremos do java, onde pode ser escolhida pela equipe entre as atuais versões do Java 13, 11 e 8.
+
+![](https://cdn.discordapp.com/attachments/576875163686010911/665765209960611850/unknown.png)
+
+Por fim, podemos adicionar algumas dependências diretamente pela interface, onde adicionamos o Lombok, Spring Web, Spring Security, Spring Data JPA, Liquibase Migration, MySQL Driver e Open Feign, boa parte das dependências que iremos adicionar, mas não todas, pois, algumas a interface ainda não adiciona automáticamente.
+
+![](https://cdn.discordapp.com/attachments/576875163686010911/665766837878784005/unknown.png)
+
+Feita as configurações necessárias, podemos gerar nosso projeto, onde é feito o download de um arquivo ```.zip``` onde nele está contido nosso projeto java, bastando apenas descompactar o arquivo para ter acesso ao projeto.
