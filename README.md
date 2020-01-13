@@ -254,11 +254,15 @@ Feito isso, ainda é necessária adicionar outra configuração para que possamo
 @EnableAutoConfiguration(exclude={DataSourceAutoConfiguration.class, HibernateJpaAutoConfiguration.class})
 ```
 
-Ela é provisória, pois, como esse projeto pode ser usado em diversos tipos de banco de dados, não iremos configurar o jpa ou o projeto para algum banco de dados específico, logo, nosso projeto ficará genêrico para diversos banco de dados.
+Ela é provisória, pois, como esse projeto pode ser usado em diversos tipos de banco de dados, não iremos configurar o Spring Data Jpa ou o projeto para algum banco de dados específico, logo, nosso projeto ficará genêrico para diversos banco de dados.
 
 ![](https://cdn.discordapp.com/attachments/576875163686010911/666428371428704276/unknown.png)
 
- 
+ E por fim, nessa mesma classe ```PatternApplication```, podemos rodar nosso projeto:
+
+![](https://cdn.discordapp.com/attachments/576875163686010911/666429639526449163/unknown.png)
+
+![](https://cdn.discordapp.com/attachments/576875163686010911/666430467905552395/unknown.png)
 
 
 
