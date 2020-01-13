@@ -160,7 +160,7 @@ Para a criação da API, utilizo o [Spring Initializr](https://start.spring.io/)
 
 Iremos criar um projeto [Maven](https://www.devmedia.com.br/introducao-ao-maven/25128), que é uma ferramenta de integração e padronização de projetos desenvolvida pela Apache, ela é responsável por gerenciar suas dependências e seus builds, dessa maneira, o Maven é uma ferramenta que facilita e nos ajuda muito nos projetos no dia-a-dia. A linguagem de programação escolhida será o [Java](https://www.tecmundo.com.br/programacao/2710-o-que-e-java-.htm) com a versão ```2.2.2``` do [Spring Boot](https://blog.geekhunter.com.br/tudo-o-que-voce-precisa-saber-sobre-o-spring-boot/) recomendada pela interface, o Spring Boot é uma ferramenta que facilita todas as nossas configurações em um ecossistema Spring, configurações que antes podiam demorar horas, mas com o Spring Boot falamos em poucos minutos.
 
-![](https://cdn.discordapp.com/attachments/576875163686010911/665759859198656532/unknown.png)
+![](https://cdn.discordapp.com/attachments/576875163686010911/666420630668967954/unknown.png)
 
 Entrando em ```Options```, podemos dar um nome, nome do pacote e a descrição do nosso projeto, também podemos informar se usaremos [Jar ou War](https://cursos.alura.com.br/forum/topico-qual-a-diferenca-entre-jar-e-war-64923), em nosso caso ```.jar``` e por fim, a versão que usaremos do java, onde pode ser escolhida pela equipe entre as atuais versões do Java 13, 11 e 8.
 
