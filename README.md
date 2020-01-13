@@ -145,7 +145,6 @@ O Code Review é uma prática muito importante entre á equipe em vários, segue
 - Spring Security
 - Spring Data JPA
 - Lombok
-- Validators
 - OpenFeign
 - Liquibase Migration
 - Swagger
@@ -167,7 +166,7 @@ Entrando em ```Options```, podemos dar um nome, nome do pacote e a descrição d
 
 ![](https://cdn.discordapp.com/attachments/576875163686010911/666413414481920040/unknown.png)
 
-Por fim, podemos adicionar algumas dependências diretamente pela interface, onde adicionamos o Lombok, Spring Web, Spring Security, Spring Data JPA, Liquibase Migration, MySQL Driver e Open Feign, boa parte das dependências que iremos adicionar, mas não todas, pois, algumas a interface ainda não adiciona automáticamente.
+Por fim, podemos adicionar algumas dependências diretamente pela interface, onde adicionamos o [Lombok](https://medium.com/collabcode/projeto-lombok-escrevendo-menos-c%C3%B3digo-em-java-8fc87b379209), [Spring Web](https://www.devmedia.com.br/desenvolvendo-uma-aplicacao-web-com-spring-boot-e-spring-mvc/34122), [Spring Security](https://blog.algaworks.com/spring-security/), [Spring Data JPA](https://blog.algaworks.com/spring-data-jpa/), [Liquibase Migration](https://medium.com/responsive-br/versionando-o-banco-de-dados-com-liquibase-bfbf0b81d02f) e [OpenFeign](https://medium.com/@felixgilioli/feign-uma-maneira-elegante-de-criar-clientes-http-em-java-c7c13c318cbe), boa parte das dependências que iremos adicionar, mas não todas, pois, algumas a interface ainda não adiciona automáticamente.
 
 ![](https://cdn.discordapp.com/attachments/576875163686010911/665766837878784005/unknown.png)
 
@@ -194,7 +193,8 @@ O [Swagger](https://blog.caelum.com.br/modelando-apis-rest-com-swagger/) é uma 
 Para adicionar o swagger e termos uma documentação de nosso projeto, é necessário adicionar duas dependências em nosso arquivo ```pom.xml```, São elas:
 
 ```
-<dependency>
+		
+		<dependency>
 			<groupId>io.springfox</groupId>
 			<artifactId>springfox-swagger2</artifactId>
 			<version>2.9.2</version>
@@ -205,9 +205,23 @@ Para adicionar o swagger e termos uma documentação de nosso projeto, é necess
 			<artifactId>springfox-swagger-ui</artifactId>
 			<version>2.9.2</version>
 		</dependency>
+		
 ```
 
+#### JUnit
 
+O [JUnit](https://www.devmedia.com.br/testes-de-unidade-com-junit/4637) é uma ferramenta que facilita e viabiliza os testes unitários em nosso projeto, com ele podemos criá-los de maneira fácil e segura. Para adicionarmos o JUnit em nosso projeto, é necessário adicionar a seguinte dependência:
+
+```
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.13-beta-3</version>
+			<scope>test</scope>
+		</dependency>
+
+```
 
 
 
