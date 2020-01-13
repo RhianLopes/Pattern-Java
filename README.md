@@ -146,7 +146,6 @@ O Code Review é uma prática muito importante entre á equipe em vários, segue
 - Spring Data JPA
 - Lombok
 - OpenFeign
-- Liquibase Migration
 - Swagger
 - JUnit
 
@@ -164,9 +163,9 @@ Iremos criar um projeto [Maven](https://www.devmedia.com.br/introducao-ao-maven/
 
 Entrando em ```Options```, podemos dar um nome, nome do pacote e a descrição do nosso projeto, também podemos informar se usaremos [Jar ou War](https://cursos.alura.com.br/forum/topico-qual-a-diferenca-entre-jar-e-war-64923), em nosso caso ```.jar``` e por fim, a versão que usaremos do java, onde pode ser escolhida pela equipe entre as atuais versões do Java 13, 11 e 8.
 
-![](https://cdn.discordapp.com/attachments/576875163686010911/666413414481920040/unknown.png)
+![](https://cdn.discordapp.com/attachments/576875163686010911/666428714590011412/unknown.png)
 
-Por fim, podemos adicionar algumas dependências diretamente pela interface, onde adicionamos o [Lombok](https://medium.com/collabcode/projeto-lombok-escrevendo-menos-c%C3%B3digo-em-java-8fc87b379209), [Spring Web](https://www.devmedia.com.br/desenvolvendo-uma-aplicacao-web-com-spring-boot-e-spring-mvc/34122), [Spring Security](https://blog.algaworks.com/spring-security/), [Spring Data JPA](https://blog.algaworks.com/spring-data-jpa/), [Liquibase Migration](https://medium.com/responsive-br/versionando-o-banco-de-dados-com-liquibase-bfbf0b81d02f) e [OpenFeign](https://medium.com/@felixgilioli/feign-uma-maneira-elegante-de-criar-clientes-http-em-java-c7c13c318cbe), boa parte das dependências que iremos adicionar, mas não todas, pois, algumas a interface ainda não adiciona automáticamente.
+Por fim, podemos adicionar algumas dependências diretamente pela interface, onde adicionamos o [Lombok](https://medium.com/collabcode/projeto-lombok-escrevendo-menos-c%C3%B3digo-em-java-8fc87b379209), [Spring Web](https://www.devmedia.com.br/desenvolvendo-uma-aplicacao-web-com-spring-boot-e-spring-mvc/34122), [Spring Data JPA](https://blog.algaworks.com/spring-data-jpa/) e [OpenFeign](https://medium.com/@felixgilioli/feign-uma-maneira-elegante-de-criar-clientes-http-em-java-c7c13c318cbe), boa parte das dependências que iremos adicionar, mas não todas, pois, algumas a interface ainda não adiciona automáticamente.
 
 ![](https://cdn.discordapp.com/attachments/576875163686010911/665766837878784005/unknown.png)
 
@@ -222,6 +221,51 @@ O [JUnit](https://www.devmedia.com.br/testes-de-unidade-com-junit/4637) é uma f
 		</dependency>
 
 ```
+
+### Configurações Adicionais
+
+Para que possamos enfim rodar nosso projeto sem problemas, ainda são necessárias algumas configurações:
+
+![](https://cdn.discordapp.com/attachments/576875163686010911/666422010251051019/unknown.png)
+
+![](https://cdn.discordapp.com/attachments/576875163686010911/666422336819429377/unknown.png)
+
+Nas imagens acima, encontramos o arquivo ```application.properties``` e alteramos o tipo de arquivo para ```.yml```, pois, fica um arquivo muito mais limpo e visual, feito isso, iremos adicionar algumas configurações nesse arquivo:
+
+```
+server:
+  port: 8010  # <--- porta onde irá subir o nosso projeto
+  servlet:
+    context-path: /pattern # <--- path base da url do nosso projeto
+
+security:
+  jwt:
+    secret: "pattern-java-jwt" # <--- secret do jwt
+    expiration: 923000000 # <--- tempo de expiração do jwt
+  public:
+    path: "/public/**" # <--- path publica
+```
+
+![](https://cdn.discordapp.com/attachments/576875163686010911/666427087338471424/unknown.png)
+
+Feito isso, ainda é necessária adicionar outra configuração para que possamos rodar enfim nosso projeto sem problemas. Devemos adicionar a seguinte anotação:
+
+```
+@EnableAutoConfiguration(exclude={DataSourceAutoConfiguration.class, HibernateJpaAutoConfiguration.class})
+```
+
+Ela é provisória, pois, como esse projeto pode ser usado em diversos tipos de banco de dados, não iremos configurar o jpa ou o projeto para algum banco de dados específico, logo, nosso projeto ficará genêrico para diversos banco de dados.
+
+![](https://cdn.discordapp.com/attachments/576875163686010911/666428371428704276/unknown.png)
+
+ 
+
+
+
+
+
+
+
 
 
 
