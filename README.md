@@ -147,7 +147,6 @@ O Code Review é uma prática muito importante entre á equipe em vários, segue
 - Lombok
 - Validators
 - OpenFeign
-- MySQL Driver
 - Liquibase Migration
 - Swagger
 - JUnit
@@ -166,7 +165,7 @@ Iremos criar um projeto [Maven](https://www.devmedia.com.br/introducao-ao-maven/
 
 Entrando em ```Options```, podemos dar um nome, nome do pacote e a descrição do nosso projeto, também podemos informar se usaremos [Jar ou War](https://cursos.alura.com.br/forum/topico-qual-a-diferenca-entre-jar-e-war-64923), em nosso caso ```.jar``` e por fim, a versão que usaremos do java, onde pode ser escolhida pela equipe entre as atuais versões do Java 13, 11 e 8.
 
-![](https://cdn.discordapp.com/attachments/576875163686010911/665765209960611850/unknown.png)
+![](https://cdn.discordapp.com/attachments/576875163686010911/666413414481920040/unknown.png)
 
 Por fim, podemos adicionar algumas dependências diretamente pela interface, onde adicionamos o Lombok, Spring Web, Spring Security, Spring Data JPA, Liquibase Migration, MySQL Driver e Open Feign, boa parte das dependências que iremos adicionar, mas não todas, pois, algumas a interface ainda não adiciona automáticamente.
 
@@ -190,4 +189,26 @@ Apesar do Spring Initializr adicionar a grande maioria das dependência de nosso
 
 #### Swagger
 
-O [Swagger](link do swagger)
+O [Swagger](https://blog.caelum.com.br/modelando-apis-rest-com-swagger/) é uma ferramenta que facilita a vida do desenvolvedor, ela é capaz de criar uma documentação de sua API REST, de forma legível e êficaz, logo agiliza todo o desenvolvimento e consulta de outros desenvolvedores a uma documentação da API segura e legivel.
+
+Para adicionar o swagger e termos uma documentação de nosso projeto, é necessário adicionar duas dependências em nosso arquivo ```pom.xml```, São elas:
+
+```
+<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger2</artifactId>
+			<version>2.9.2</version>
+		</dependency>
+
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger-ui</artifactId>
+			<version>2.9.2</version>
+		</dependency>
+```
+
+
+
+
+
+
