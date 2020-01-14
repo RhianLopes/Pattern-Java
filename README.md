@@ -221,7 +221,7 @@ O [JUnit](https://www.devmedia.com.br/testes-de-unidade-com-junit/4637) é uma f
 
 ```
 
-### Configurações Adicionais
+### ⚙ Configurações Adicionais
 
 Para que possamos enfim rodar nosso projeto sem problemas, ainda são necessárias algumas configurações:
 
