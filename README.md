@@ -268,9 +268,7 @@ Ela é provisória, pois, como esse projeto pode ser usado em diversos tipos de 
 A arquitetura utilizada em nosso projeto será mostrada e explicada, ficará disponível para vizualização no repositório.
 
 ```
-
-br.com.company.pattern
-	         |
-		 -----> config
- 
+	 
+config --^
+		 	    	
 ```
