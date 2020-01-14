@@ -142,7 +142,6 @@ O Code Review é uma prática muito importante entre á equipe em vários, segue
 - Maven
 - Spring Boot
 - Spring Web
-- Spring Security
 - Spring Data JPA
 - Lombok
 - OpenFeign
@@ -262,7 +261,7 @@ Ela é provisória, pois, como esse projeto pode ser usado em diversos tipos de 
 
 ![](https://cdn.discordapp.com/attachments/576875163686010911/666429639526449163/unknown.png)
 
-![](https://cdn.discordapp.com/attachments/576875163686010911/666430467905552395/unknown.png)
+![](https://cdn.discordapp.com/attachments/576875163686010911/666431515780972594/unknown.png)
 
 
 
