@@ -262,3 +262,15 @@ Ela é provisória, pois, como esse projeto pode ser usado em diversos tipos de 
 ![](https://cdn.discordapp.com/attachments/576875163686010911/666429639526449163/unknown.png)
 
 ![](https://cdn.discordapp.com/attachments/576875163686010911/666431515780972594/unknown.png)
+
+## Arquitetura
+
+A arquitetura utilizada em nosso projeto será mostrada e explicada, ficará disponível para vizualização no repositório.
+
+```
+
+br.com.company.pattern
+	         |
+		 -----> config
+ 
+```
