@@ -150,7 +150,7 @@ O Code Review é uma prática muito importante entre á equipe em vários, segue
 
 ## 🎨 Criação do Projeto
 
-### Spring Initializr
+### ♻ Spring Initializr
 
 Para a criação da API, utilizo o [Spring Initializr](https://start.spring.io/) que é uma interface web e simples para a criação de um projeto Spring, nele podemos configurar a linguagem, nome do projeto, dependências etc...
 
@@ -170,7 +170,7 @@ Por fim, podemos adicionar algumas dependências diretamente pela interface, ond
 
 Feita as configurações necessárias, podemos gerar nosso projeto, onde é feito o download de um arquivo ```.zip``` onde nele está contido nosso projeto java, bastando apenas descompactar o arquivo para ter acesso ao projeto.
 
-### Inicialização
+### 💥 Inicialização
 
 Para iniciarmos nosso projeto, irei utilizar o [IntelliJ IDEA](http://jetbrains.com/idea/), caso queira utiliza-la também, basta fazer o [download](https://www.jetbrains.com/idea/download/#section=windows) podendo seguir o [tutorial](https://treehouse.github.io/installation-guides/windows/intellij-idea-win.html).
 
@@ -180,7 +180,7 @@ Para iniciarmos nosso projeto, irei utilizar o [IntelliJ IDEA](http://jetbrains.
 
 Com o intelliJ instalado e já aberto, podemos abrir nosso projeto em ```Open```, e procurar o local em seu computador onde está o nosso projeto, depois de encontrado, devemos selecionar o arquivo ```pom.xml``` e clicar em ```OK```. Feito isso, o intelliJ irá importar e fazer o download de nossas dependências, se necessário.
 
-### Dependências Adicionais
+### 📚 Dependências Adicionais
 
 Apesar do Spring Initializr adicionar a grande maioria das dependência de nosso projeto, devemos adicionar mais algumas dependências em nosso projeto, serão elas:
 
@@ -262,14 +262,3 @@ Ela é provisória, pois, como esse projeto pode ser usado em diversos tipos de 
 ![](https://cdn.discordapp.com/attachments/576875163686010911/666429639526449163/unknown.png)
 
 ![](https://cdn.discordapp.com/attachments/576875163686010911/666431515780972594/unknown.png)
-
-
-
-
-
-
-
-
-
-
-
