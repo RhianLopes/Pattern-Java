@@ -315,7 +315,7 @@ public class User {
 }
 ```
 
-A annotation ```@Data```, vinda do Lombok serve para [dicionar algumas annotations por padrão](https://projectlombok.org/features/Data), a annotation ```@Accessors(chain = true)``` serve para podermos acessar e montar um objeto diretamente em sua criação, como é possível fazer no [Kotlin](https://kotlinlang.org/), por exemplo:
+A annotation ```@Data```, vinda do Lombok serve para [adicionar algumas annotations por padrão](https://projectlombok.org/features/Data), a annotation ```@Accessors(chain = true)``` serve para podermos acessar e montar um objeto diretamente em sua criação, como é possível fazer no [Kotlin](https://kotlinlang.org/), por exemplo:
 
 ```
 ---------- SEM ACCESSORS ----------
