@@ -265,10 +265,118 @@ Ela é provisória, pois, como esse projeto pode ser usado em diversos tipos de 
 
 ## Arquitetura
 
-A arquitetura utilizada em nosso projeto será mostrada e explicada, ficará disponível para vizualização no repositório.
+### Config
+
+Pasta onde ficam as configurações específicas do projeto, como @Bean ou Config de Swagger, por exemplo:
 
 ```
-	 
-config --^
-		 	    	
+@Configuration
+public class MapperConfig {
+
+	@Bean
+	public ModelMapper modelMapper() {
+		return new ModelMapper();
+	}
+}
 ```
+
+**Convenção: [Nome da Classe] + Config** 
+
+### Domain
+
+Na pasta ```Domain``` devem ficar todas as classes que possuem a responsabilidade de mapear as tabelas do banco de dados, exemplo:
+
+```
+@Data
+@Entity
+@Accessors(chain = true)
+public class User {
+
+	@Id
+	@JsonIgnore
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+
+	@NotNull
+	@Size(max = 100)
+	private String cpfCnpj;
+
+	@NotNull
+	@Size(max = 100)
+	private String name;
+
+	@NotNull
+	@Size(max = 100)
+	private String email;
+
+	@NotNull
+	@Size(max = 100)
+	private String phone;
+}
+```
+
+A annotation ```@Data```, vinda do Lombok serve para [dicionar algumas annotations por padrão](https://projectlombok.org/features/Data), a annotation ```@Accessors(chain = true)``` serve para podermos acessar e montar um objeto diretamente em sua criação, como é possível fazer no [Kotlin](https://kotlinlang.org/), por exemplo:
+
+```
+---------- SEM ACCESSORS ----------
+final User user = new User();
+user.setId(1L);
+user.setName("José");
+
+---------- COM ACCESSORS ----------
+final User user = new User()
+	.setId(1L)
+	.setName("José");
+```
+
+Por fim, a annotation ```@Entity``` serve para referênciar que a classe é uma entidade de banco.
+
+### Mapper
+
+O ```Mapper``` possui a função de mapear de um Objeto para outro, deve possuir a Annotation ```@Component``` e deve ser testado, não é permitido o Mapper possuir regra de negócio, deve apenas mapear de um objeto para outro, por exemplo: 
+
+```
+@Component
+public class UserMapper {
+
+    public User mapper(UserRequestDto userRequestDto) {
+        return new User
+                .setMotherName(userRequestDtouserRequestDto.getMotherName())
+                .setBirthdate(userRequestDto.getBirthdate())
+                .setCpfCnpj(userRequestDto.getCpfCnpj())
+                .setEmail(userRequestDto.getEmail())
+                .setPhone(userRequestDto.getPhone())
+                .setName(userRequestDto.getName());
+    }
+}
+```
+
+O nome da classe deve ser sempre o nome da classe que é retornada no mapper:
+
+**Convenção: [Nome da Classe] + Mapper** 
+
+### Converter
+
+Muito parecido com o ```Mapper``` o Converter possui a mesma função e regras que o ```Mapper```, mas agora é permitido possuir regra de negócio dentro do mesmo, como exemplo tratamento de dados ou datas específicas de um objeto.
+
+```
+@Component
+public class ProductConverter {
+
+    public Product from(ProductRequestDto productRequestDto) {
+        return new Product()
+			.setPrice(productRequestDto.getPrice())
+			.setName(productRequestDto.getName())
+			.setUpdateAt(LocalDate.now());
+    }
+}
+```
+
+No caso acima, a data deve ser exatamente a data atual na forma de ```LocalDate```.
+
+**Convenção: [Nome da Classe] + Converter** 
+
+
+
+
+
