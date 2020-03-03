@@ -263,9 +263,9 @@ Ela é provisória, pois, como esse projeto pode ser usado em diversos tipos de 
 
 ![](https://cdn.discordapp.com/attachments/576875163686010911/666431515780972594/unknown.png)
 
-## Arquitetura
+## 🧱 Arquitetura
 
-### Config
+### ⚙ Config
 
 Pasta onde ficam as configurações específicas do projeto, como @Bean ou Config de Swagger, por exemplo:
 
@@ -282,7 +282,7 @@ public class MapperConfig {
 
 **Convenção: [Nome da Classe] + Config** 
 
-### Domain
+### 🕶 Domain
 
 Na pasta ```Domain``` devem ficar todas as classes que possuem a responsabilidade de mapear as tabelas do banco de dados, exemplo:
 
@@ -331,7 +331,7 @@ final User user = new User()
 
 Por fim, a annotation ```@Entity``` serve para referênciar que a classe é uma entidade de banco.
 
-### Mapper
+### 🎟 Mapper
 
 O ```Mapper``` possui a função de mapear de um Objeto para outro, deve possuir a Annotation ```@Component``` e deve ser testado, não é permitido o Mapper possuir regra de negócio, deve apenas mapear de um objeto para outro, por exemplo: 
 
@@ -355,7 +355,7 @@ O nome da classe deve ser sempre o nome da classe que é retornada no mapper:
 
 **Convenção: [Nome da Classe] + Mapper** 
 
-### Converter
+### 🎫 Converter
 
 Muito parecido com o ```Mapper``` o Converter possui a mesma função e regras que o ```Mapper```, mas agora é permitido possuir regra de negócio dentro do mesmo, como exemplo tratamento de dados ou datas específicas de um objeto.
 
