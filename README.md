@@ -376,6 +376,35 @@ No caso acima, a data deve ser exatamente a data atual na forma de ```LocalDate`
 
 **Convenção: [Nome da Classe] + Converter** 
 
+### 🚑 Exception
+
+A pasta de ```Exception``` ficam todos os possíveis erros e exceptions tratadas da aplicação, por exemplo:
+
+```
+@ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
+public abstract class ConectionException extends RuntimeException {
+
+    public ConectionException(String rule){
+        super(rule);
+    }
+}
+```
+
+O exemplo acima é uma classe de exception abstrata, onde quando algum erro for sobre algum erro de conexão, deve ser criada uma classe expecificando o tipo de erro de conexão e deve extender a ```ConectionException```. Exemplo:
+
+```
+public class GoogleException extends ConectionException {
+
+    public GoogleException(String rule) {
+        super(rule);
+    }
+}
+```
+
+**Convenção: [Nome da Classe] + Exception** 
+
+
+
 
 
 
