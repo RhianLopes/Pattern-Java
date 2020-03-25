@@ -333,7 +333,7 @@ Por fim, a annotation ```@Entity``` serve para referênciar que a classe é uma 
 
 ### 🎟 Mapper
 
-O ```Mapper``` possui a função de mapear de um Objeto para outro, deve possuir a Annotation ```@Component``` e deve ser testado, não é permitido o Mapper possuir regra de negócio, deve apenas mapear de um objeto para outro, por exemplo: 
+O ```Mapper``` possui a função de mapear de um Objeto para outro, deve possuir a Annotation ```@Component``` e deve ser testado com testes unitários, não é permitido o Mapper possuir regra de negócio, deve apenas mapear de um objeto para outro, por exemplo: 
 
 ```
 @Component
